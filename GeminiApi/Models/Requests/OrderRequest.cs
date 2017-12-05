@@ -22,6 +22,6 @@ namespace GeminiApi.Models.Requests
         [JsonProperty("type")]
         public string Type { get { return "exchange limit"; } }
 
-        public OrderRequest(string url, long nonce) : base(url, nonce) { }
+        public OrderRequest(string url) : base(url) { }
     }
 }

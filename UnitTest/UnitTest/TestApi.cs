@@ -6,8 +6,8 @@ namespace UnitTest
     [TestClass]
     public class TestApi
     {
-        private static string _key = "";
-        private static string _secret = "";
+        private static string _key = "pVMzjlL8TUDX2fe8OODw";
+        private static string _secret = "29fxP948vJM3FfknBArV3fmaTY8E";
 
         private GeminiRequest _gr = new GeminiRequest(_key, _secret);
 
