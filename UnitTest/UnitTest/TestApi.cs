@@ -29,7 +29,7 @@ namespace UnitTest
         public void GetOrderStatus()
         {
             var resultNewOrder =  _gr.CreateNewOrder(10, 100);
-            var resultGetStatus = _gr.GetOrderStatus(resultNewOrder.OrderId);
+            var resultGetStatus = _gr.GetOrderStatus(resultNewOrder.OrderId.ToString());
             if (resultNewOrder.Timestamp != resultGetStatus.Timestamp)
             {
                 Assert.Fail();
@@ -45,7 +45,7 @@ namespace UnitTest
 
             _gr.CancelOrder(resultNewOrder.OrderId);
 
-            var resultGetStatus = _gr.GetOrderStatus(resultNewOrder.OrderId);
+            var resultGetStatus = _gr.GetOrderStatus(resultNewOrder.OrderId.ToString());
             if (!resultGetStatus.IsCancelled)
             {
                 Assert.Fail();

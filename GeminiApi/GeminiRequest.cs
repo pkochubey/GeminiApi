@@ -59,12 +59,12 @@ namespace GeminiApi
             return Send<List<OrderResponse>>(new GetActiveOrders());
         }
 
-        public OrderResponse GetOrderStatus(long orderId)
+        public OrderResponse GetOrderStatus(string orderId)
         {
             return Send<OrderResponse>(new GetOrderStatus(orderId));
         }
 
-        public BasicResponse CancelOrder(long orderId)
+        public BasicResponse CancelOrder(string orderId)
         {
             return Send<BasicResponse>(new CancelOrder(orderId));
         }

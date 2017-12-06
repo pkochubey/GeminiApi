@@ -21,7 +21,7 @@ namespace GeminiApi.Models
 
     public class CancelOrder : OrderStatusRequest
     {
-        public CancelOrder(long orderId) : base("/v1/order/cancel", orderId) { }
+        public CancelOrder(string orderId) : base("/v1/order/cancel", orderId) { }
     }
 
     public class GetAvailableBalances : BasicRequest
@@ -31,7 +31,7 @@ namespace GeminiApi.Models
 
     public class GetOrderStatus : OrderStatusRequest
     {
-        public GetOrderStatus(long orderId) : base("/v1/order/status", orderId) { }
+        public GetOrderStatus(string orderId) : base("/v1/order/status", orderId) { }
     }
 
     public class GetActiveOrders : BasicRequest

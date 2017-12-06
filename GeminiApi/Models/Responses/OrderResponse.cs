@@ -10,7 +10,7 @@ namespace GeminiApi.Models.Responses
     public class OrderResponse
     {
         [JsonProperty("order_id")]
-        public long OrderId { get; internal set; }
+        public string OrderId { get; internal set; }
 
         [JsonProperty("client_order_id")]
         public string ClientOrderId { get; internal set; }
