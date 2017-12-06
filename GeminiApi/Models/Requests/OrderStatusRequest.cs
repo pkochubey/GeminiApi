@@ -10,9 +10,9 @@ namespace GeminiApi.Models.Requests
     public class OrderStatusRequest : BasicRequest
     {
         [JsonProperty("order_id")]
-        public int OrderId { get; internal set; }
+        public long OrderId { get; internal set; }
 
-        public OrderStatusRequest(string url, int orderId) : base(url)
+        public OrderStatusRequest(string url, long orderId) : base(url)
         {
             OrderId = orderId;
         }
